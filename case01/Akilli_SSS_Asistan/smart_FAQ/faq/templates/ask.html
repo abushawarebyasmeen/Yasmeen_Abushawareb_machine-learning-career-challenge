@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS Asistan</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>SSS Asistan</h1>
+
+        {% if error %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
+        {% else %}
+            <div class="query-response">
+                <h3>Soru:</h3>
+                <p>{{ query }}</p>
+                <h3>Cevap:</h3>
+                <p>{{ response }}</p>
+            </div>
+
+            {% if suggestions %}
+                <div class="suggestions">
+                    <h4>Belki bu sorular da ilginizi çekebilir:</h4>
+                    <ul>
+                        {% for s in suggestions %}
+                            <li>
+                                <form method="get" action="{% url 'ask_question' %}">
+                                    <input type="hidden" name="query" value="{{ s }}">
+                                    <button type="submit">{{ s }}</button>
+                                </form>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        {% endif %}
+
+        <a href="/" class="back-button">Başka Bir Soru Sor</a>
+    </div>
+</body>
+</html>

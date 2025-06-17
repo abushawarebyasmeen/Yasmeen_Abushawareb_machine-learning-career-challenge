@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SSS Asistan</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SSS Asistanına Hoş Geldiniz</h1>
+            <p>Başlamak için aşağıya sorunuzu yazın.</p>
+        </header>
+        <main>
+            <form method="get" action="/ask/">
+                <input 
+                    type="text" 
+                    name="query" 
+                    placeholder="Sorunuzu buraya yazın..." 
+                    required 
+                />
+                <button type="submit">Soru Sor</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

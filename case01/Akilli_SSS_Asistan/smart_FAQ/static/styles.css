@@ -1,0 +1,157 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #eeeeee, #ffffff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container for Centering Content */
+.container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+}
+
+/* Header Styles */
+header {
+    margin-bottom: 30px;
+}
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #f57c00;
+}
+header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
+    margin-top: 30px;
+}
+
+input[type="text"] {
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 500px;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f57c00;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 16px;
+    background: #f57c00;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 500px;
+}
+
+button:hover {
+    background: #e65100;
+}
+
+/* Query Response Section */
+.query-response {
+    text-align: left;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.query-response h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #f57c00;
+}
+
+.query-response p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Error Message */
+.error {
+    color: #e65100;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Back Button */
+a.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 16px;
+    background: #f57c00;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+a.back-button:hover {
+    background: #e65100;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"], button {
+        font-size: 1rem;
+    }
+}
