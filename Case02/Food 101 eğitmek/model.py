@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""model.ipynb
+"""model.ipynb"""
 
 import torch
 import torch.nn as nn
